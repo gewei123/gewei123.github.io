@@ -1,0 +1,2 @@
+基本上所有的关系数据库都有锁机制,当客户端访问数据时,会对访问的数据进行加锁,知道所有的操作commit或者rollback之后才会解除锁(悲观锁)
+而redis是一种乐观锁的机制,python里面使用流水线pipeline的multi和execute进行事务控制,同时添加watch(键),如果键在添加命令到事务的时候发生改变,会返回错误这时候可以调用unwatch或者discard方法进行重置reset,客户端可以重试.(pipeline可以设置true和false 分别是事务控制和非事务控制).

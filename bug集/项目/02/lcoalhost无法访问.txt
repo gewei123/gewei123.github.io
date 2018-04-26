@@ -1,0 +1,2 @@
+在浏览器中输入localhost没办法访问输入127.0.0.1可以访问
+修改C:\Windows\System32\drivers\etc\hosts文件 最后一行添加localhost 127.0.0.1
